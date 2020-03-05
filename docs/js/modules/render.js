@@ -43,7 +43,7 @@ function Hulp(data){
         </ul>
     </p>
 
-    <img class="avatar" src="/images/boekje/happy.png" alt="Booky">
+    <img class="avatar" src="./images/boekje/happy.png" alt="Booky">
     <p>Klaar om een werstuk te gaan maken? Druk op "Nieuw Werkstuk" bovenaan de website!</p>
 </main>`
   };
@@ -91,7 +91,7 @@ function Search() {
     console.log(header, "ja")
     main.innerHTML = ""
     main.classList.add("grid")
-    main.insertAdjacentHTML('beforebegin', `<div id="instructions"><h1>Kies een leuk onderwerp</h1> <br> <div class=flex> <img class="avatar" src="/images/boekje/happy.png" alt="Booky"> <p>"Een onderwerp vormt de basis van jouw werkstuk. Kies een onderwerp die bij jou past. Vind je het bijvoorbeeld leuk om films te kijken met ridders? Kijk dan eens naar geschiedenis!"</p></div></div>`);
+    main.insertAdjacentHTML('beforebegin', `<div id="instructions"><h1>Kies een leuk onderwerp</h1> <br> <div class=flex> <img class="avatar" src="./images/boekje/happy.png" alt="Booky"> <p>"Een onderwerp vormt de basis van jouw werkstuk. Kies een onderwerp die bij jou past. Vind je het bijvoorbeeld leuk om films te kijken met ridders? Kijk dan eens naar geschiedenis!"</p></div></div>`);
     const subjects = ['Geschiedenis', 'Dieren', 'Landen en Steden', 'Sport en Hobby', 'Natuur', 'Bekende Personen', 'Mens & Gezondheid', 'Beroepen', ]
 
 
