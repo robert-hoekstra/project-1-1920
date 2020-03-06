@@ -1,4 +1,5 @@
 # Booky de OBA mascotte!
+[![Image from Gyazo](https://i.gyazo.com/74d06a3afff3ee7c0455ebadcd7e943b.gif)](https://gyazo.com/74d06a3afff3ee7c0455ebadcd7e943b)
 
 ## Inhoudsopgave
 - [Booky de OBA mascotte!](#booky-de-oba-mascotte-)
@@ -10,6 +11,9 @@
 
 ## Concept
 Booky is een mascotte van de OBA. Gemaakt voor kinderen die voor het eerst een werkstuk maken. Booky is een tool die kinderen richtlijnen geeft om een goed werkstuk te maken. En om kennis te maken met de Openbare Bibliotheek van Amsterdam. Door Booky te gebruiker leren kinderen hoe zij boeken of andere bronnen kunnen raadplegen via de OBA.
+
+## Hoe werkt het?
+[![Image from Gyazo](https://i.gyazo.com/d361ff286fa0d7f236081471c327adbf.gif)](https://gyazo.com/d361ff286fa0d7f236081471c327adbf)
 
 ## Doelgroep
 De doelgroep van de applicatie zijn scholieren van de basisschool die hulp nodig hebben bij het maken van hun (eerste) werkstuk. En kinderen die voor het eerst in aanraking komen met de Openbare Bibliotheek van Amsterdam

@@ -28,10 +28,15 @@ function SetRoutes(data) {
     render.Search(data),
 console.log("zoeken!")}
 
+let werkstuk = function(){
+    render.Werkstuk()
+}
+
   let routes = {
     "/": home,
     "/onderwerp-kiezen": search,
     "/hoemaakikeenwerkstuk": hulp,
+    "/mijnwerkstukken": werkstuk,
     "/:stringParam": getBooks,
     "/:*": notFound 
   };

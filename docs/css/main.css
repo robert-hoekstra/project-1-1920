@@ -1,6 +1,7 @@
 *{
     font-family: avenir;
     font-size: 1em;
+    line-height: 1.4em;
     text-align: center;
     padding: 0;
     margin:0;
@@ -41,6 +42,17 @@ p{
     text-align: left;
     margin: auto;
     padding: 1em;
+    max-width: 25em;
+}
+
+#except{
+    border: solid gray 1px;
+    box-shadow: 5px 5px 5px 0px gray;
+}
+
+#except:hover{
+    color: black;
+    background-color: white;
 }
 
 #app{
@@ -67,9 +79,23 @@ section{
     padding: 1em;
 }
 
+main section img{
+    width: 100%;
+}
+
 img.avatar{
     width: 200px;
     margin: auto;
+}
+
+
+ul{
+    width: 40%;
+    margin: auto;
+}
+
+ul li{
+    list-style: none;
 }
 
 button{

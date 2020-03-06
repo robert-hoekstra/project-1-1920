@@ -1,8 +1,8 @@
 // render data
-function Hulp(data){
-    const main = document.querySelector('main');
-    console.log("main", main)
-    main.innerHTML = `    <main>
+function Hulp(data) {
+  const main = document.querySelector("main");
+  console.log("main", main);
+  main.innerHTML = `    <main>
     <h1>Hoe maak ik een werkstuk?</h1>
     <p>Een werkstuk is een uitgebreid verslag over een onderwerp. Dat kan van alles zijn! Met een werkstuk schrijf je
         een verslag over verschillende dingen die binnen een onderwerp voorkomen.</p>
@@ -45,66 +45,134 @@ function Hulp(data){
 
     <img class="avatar" src="./images/boekje/happy.png" alt="Booky">
     <p>Klaar om een werstuk te gaan maken? Druk op "Nieuw Werkstuk" bovenaan de website!</p>
-</main>`
-  };
+</main>`;
+}
+
+function Werkstuk(data) {
+  const main = document.querySelector("main");
+  console.log("main", main);
+  main.innerHTML = ` <main class="grid">
+    <section id="except">
+    <div>
+        <h2>Werkstuk over Dieren</h2>
+            <img src="https://www.scientias.nl/wp-content/uploads/2019/10/Stokstaartje.jpg" alt="">
+            <p>Dit werkstuk bevat 5 bronnen</p>
+            <button>Bekijken</button>
+        </div>
+    </section id="except">
+    <section id="except">
+        <div>
+            <h2>Werkstuk over Audi</h2>
+            <img src="https://static.autoblog.nl/images/wp2019/Audi-RS-Q8-1.jpg" alt="">
+            <p>Dit werkstuk bevat 4 bronnen</p>
+            <button>Bekijken</button>
+        </div>
+    </section id="except">
+    <section id="except">
+        <div>
+            <h2>Werkstuk over KLM</h2>
+            <img src="https://www.zakenreisnieuws.nl/sites/default/files/styles/artikel/public/website_633x300/slider-airlines/klm_boeing_777_c_reismedia_1280_3.jpg?itok=3oCJnMGr" alt="">
+            <p>Dit werkstuk bevat 6 bronnen</p>
+            <button>Bekijken</button>
+        </div>
+    </section id="except">
+    <section id="except">
+        <div>
+            <h2>Werkstuk over Kaas</h2>
+            <img src="https://images.squarespace-cdn.com/content/v1/5a1592ff0abd04e470d48744/1512553461588-BZ9X4L2F5CINL2DU8QTF/ke17ZwdGBToddI8pDm48kPQujXO7frs1W7a77FZyt1F7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0prfa1Z6IeUrCPboCAmmHZn3ZVtqnTHXt-4Tm3byPSNDpHfFtqjKxWw0uc1YBtkl-w/Kaas.jpeg?format=2500w" alt="">
+            <p>Dit werkstuk bevat 10 bronnen</p>
+            <button>Bekijken</button>
+        </div>
+    </section id="except">
+    <section id="except">
+        <div>
+            <h2>Werkstuk over Donald Duck</h2>
+            <img src="https://www.muurstickerplus.nl/media/product/533/donald-duck-8e9.jpg" alt="">
+            <p>Dit werkstuk bevat 3 bronnen</p>
+            <button>Bekijken</button>
+        </div>
+    </section id="except">
+    <section id="except">
+        <div>
+            <h2>Werkstuk over Europese Unie</h2>
+            <img src="https://dwars.org/overdwars/wp-content/uploads/sites/3/2017/09/EU-flag-heart-e1506168926664.jpg" alt="">
+            <p>Dit werkstuk bevat 0 bronnen</p>
+            <button>Bekijken</button>
+        </div>
+    </section id="except">
+</main>`;
+}
 
 function Data(data) {
-    const main = document.querySelector('main');
-    const header = document.querySelectorAll('h1')
-    const paragraph = document.querySelectorAll('p')
-    const results = data.results;
-    console.dir(results);
-    paragraph[0].innerText = `"Om een goed werkstuk te maken heb je informatie nodig. Informatie haal je uit bronnen. Bronnen kunnen bijvoorbeeld boeken zijn. Maar ook video's op youtube of plaatjes kunnen goede bronnen zijn! Door op een van de boeken te klikken in de lijst kun je direct zien waar je het boek kunt ophalen, super handig!"`
-    header[0].innerText = "Kies een interessant boek!";
-    main.innerHTML = ""
-    main.classList.add("grid")
-    results.forEach((item, i) => {
-      const html = `
+  const main = document.querySelector("main");
+  const header = document.querySelectorAll("h1");
+  const paragraph = document.querySelectorAll("p");
+  const results = data.results;
+  console.dir(results);
+  paragraph[0].innerText = `"Om een goed werkstuk te maken heb je informatie nodig. Informatie haal je uit bronnen. Bronnen kunnen bijvoorbeeld boeken zijn. Maar ook video's op youtube of plaatjes kunnen goede bronnen zijn! Door op een van de boeken te klikken in de lijst kun je direct zien waar je het boek kunt ophalen, super handig!"`;
+  header[0].innerText = "Kies een interessant boek!";
+  main.innerHTML = "";
+  main.classList.add("grid");
+  results.forEach((item, i) => {
+    const html = `
       <a href="${item.detailLink}" target="window">
               <article id="detail">
                 <h2>${item.titles[0]}</h2>
-                <p>${item.summaries ? item.summaries[0] : 'Geen samenvatting'}</p>
+                <p>${
+                  item.summaries ? item.summaries[0] : "Geen samenvatting"
+                }</p>
                 <img src="${
-                  item.coverimages ? item.coverimages[1] : 'Geen samenvatting'
+                  item.coverimages ? item.coverimages[1] : "Geen samenvatting"
                 }">
 
-                <span class="aantal" style="display:block">Aantal beschikbare exemplaren: ${item.frabl.cnt} </span>
+                <span class="aantal" style="display:block">Aantal beschikbare exemplaren: ${
+                  item.frabl.cnt
+                } </span>
+                    <button>Voeg toe aan werkstuk</button>
+                    <button>Bekijk beschikbaarheid</button>
               </article>
         </a>
             `;
-      main.insertAdjacentHTML('beforeend', html);
-    });
-  }
-
-
+    main.insertAdjacentHTML("beforeend", html);
+  });
+}
 
 // render data
 function Search() {
-    const main = document.querySelector('main');
-    const header = document.querySelectorAll('h1')
-    const div = document.getElementById('instructions')
-    if(div !== null){
-        div.innerHTML = ""
-    }
+  const main = document.querySelector("main");
+  const header = document.querySelectorAll("h1");
+  const div = document.getElementById("instructions");
+  if (div !== null) {
+    div.innerHTML = "";
+  }
 
-    console.log(div)
-    console.log(header, "ja")
-    main.innerHTML = ""
-    main.classList.add("grid")
-    main.insertAdjacentHTML('beforebegin', `<div id="instructions"><h1>Kies een leuk onderwerp</h1> <br> <div class=flex> <img class="avatar" src="./images/boekje/happy.png" alt="Booky"> <p>"Een onderwerp vormt de basis van jouw werkstuk. Kies een onderwerp die bij jou past. Vind je het bijvoorbeeld leuk om films te kijken met ridders? Kijk dan eens naar geschiedenis!"</p></div></div>`);
-    const subjects = ['Geschiedenis', 'Dieren', 'Landen en Steden', 'Sport en Hobby', 'Natuur', 'Bekende Personen', 'Mens & Gezondheid', 'Beroepen', ]
+  console.log(div);
+  console.log(header, "ja");
+  main.innerHTML = "";
+  main.classList.add("grid");
+  main.insertAdjacentHTML(
+    "beforebegin",
+    `<div id="instructions"><h1>Kies een leuk onderwerp</h1> <br> <div class=flex> <img class="avatar" src="./images/boekje/happy.png" alt="Booky"> <p>"Een onderwerp vormt de basis van jouw werkstuk. Kies een onderwerp die bij jou past. Vind je het bijvoorbeeld leuk om films te kijken met ridders? Kijk dan eens naar geschiedenis!"</p></div></div>`
+  );
+  const subjects = [
+    "Geschiedenis",
+    "Dieren",
+    "Landen en Steden",
+    "Sport en Hobby",
+    "Natuur",
+    "Bekende Personen",
+    "Mens & Gezondheid",
+    "Beroepen"
+  ];
 
-
-
-    subjects.forEach((subjects, i) => {
-        const html = `
+  subjects.forEach((subjects, i) => {
+    const html = `
         <a href=#${subjects}>
         <article id="${subjects}">
         <h2>${subjects}</h2>
         </article>`;
-        main.insertAdjacentHTML('beforeend', html)
-
-    })
+    main.insertAdjacentHTML("beforeend", html);
+  });
 }
 
-  export default {Hulp, Data, Search}
+export default { Hulp, Data, Search, Werkstuk };
