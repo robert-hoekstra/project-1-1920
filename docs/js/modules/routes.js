@@ -32,10 +32,15 @@ let werkstuk = function(){
     render.Werkstuk()
 }
 
+let werkstukDetail = function(){
+    render.WerkstukDetail()
+}
+
   let routes = {
     "/": home,
     "/onderwerp-kiezen": search,
     "/hoemaakikeenwerkstuk": hulp,
+    "/werkstuk": werkstukDetail,
     "/mijnwerkstukken": werkstuk,
     "/:stringParam": getBooks,
     "/:*": notFound 

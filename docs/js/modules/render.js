@@ -57,7 +57,7 @@ function Werkstuk(data) {
         <h2>Werkstuk over Dieren</h2>
             <img src="https://www.scientias.nl/wp-content/uploads/2019/10/Stokstaartje.jpg" alt="">
             <p>Dit werkstuk bevat 5 bronnen</p>
-            <button>Bekijken</button>
+            <a class="button" href="#werkstuk">Bekijken</a class="button" href="#werkstuk">
         </div>
     </section id="except">
     <section id="except">
@@ -65,7 +65,7 @@ function Werkstuk(data) {
             <h2>Werkstuk over Audi</h2>
             <img src="https://static.autoblog.nl/images/wp2019/Audi-RS-Q8-1.jpg" alt="">
             <p>Dit werkstuk bevat 4 bronnen</p>
-            <button>Bekijken</button>
+            <a class="button" href="#werkstuk">Bekijken</a class="button" href="#werkstuk">
         </div>
     </section id="except">
     <section id="except">
@@ -73,7 +73,7 @@ function Werkstuk(data) {
             <h2>Werkstuk over KLM</h2>
             <img src="https://www.zakenreisnieuws.nl/sites/default/files/styles/artikel/public/website_633x300/slider-airlines/klm_boeing_777_c_reismedia_1280_3.jpg?itok=3oCJnMGr" alt="">
             <p>Dit werkstuk bevat 6 bronnen</p>
-            <button>Bekijken</button>
+            <a class="button" href="#werkstuk">Bekijken</a class="button" href="#werkstuk">
         </div>
     </section id="except">
     <section id="except">
@@ -81,7 +81,7 @@ function Werkstuk(data) {
             <h2>Werkstuk over Kaas</h2>
             <img src="https://images.squarespace-cdn.com/content/v1/5a1592ff0abd04e470d48744/1512553461588-BZ9X4L2F5CINL2DU8QTF/ke17ZwdGBToddI8pDm48kPQujXO7frs1W7a77FZyt1F7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0prfa1Z6IeUrCPboCAmmHZn3ZVtqnTHXt-4Tm3byPSNDpHfFtqjKxWw0uc1YBtkl-w/Kaas.jpeg?format=2500w" alt="">
             <p>Dit werkstuk bevat 10 bronnen</p>
-            <button>Bekijken</button>
+            <a class="button" href="#werkstuk">Bekijken</a class="button" href="#werkstuk">
         </div>
     </section id="except">
     <section id="except">
@@ -89,7 +89,7 @@ function Werkstuk(data) {
             <h2>Werkstuk over Donald Duck</h2>
             <img src="https://www.muurstickerplus.nl/media/product/533/donald-duck-8e9.jpg" alt="">
             <p>Dit werkstuk bevat 3 bronnen</p>
-            <button>Bekijken</button>
+            <a class="button" href="#werkstuk">Bekijken</a class="button" href="#werkstuk">
         </div>
     </section id="except">
     <section id="except">
@@ -97,10 +97,69 @@ function Werkstuk(data) {
             <h2>Werkstuk over Europese Unie</h2>
             <img src="https://dwars.org/overdwars/wp-content/uploads/sites/3/2017/09/EU-flag-heart-e1506168926664.jpg" alt="">
             <p>Dit werkstuk bevat 0 bronnen</p>
-            <button>Bekijken</button>
+            <a class="button" href="#werkstuk">Bekijken</a href="#werkstuk">
         </div>
     </section id="except">
 </main>`;
+}
+
+function WerkstukDetail(data) {
+  const main = document.querySelector("main");
+  console.log("main", main);
+  main.innerHTML = ` 
+
+    <main class="detailpage">
+    <h1>Mijn werkstuk over KLM</h1>
+    <img src="https://blog.klm.com/assets/uploads/2019/07/headerfb-768x510.png">
+
+            <section>
+                <div>
+                    <section id="nogrid"><h2>
+                        Video
+                    </h2></section>
+                    <ul>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+</ul>
+                </div>
+                <div>
+                    <section id="nogrid"><h2>
+                        Audio
+                    </h2></section>
+                    <ul>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+</ul>
+                </div>
+                <div>
+                    <section id="nogrid"><h2>
+                        Afbeeldingen
+                    </h2></section>
+                    <ul>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+</ul>
+                </div>
+                <div>
+                    <section id="nogrid"><h2>
+                        Teksten
+                    </h2></section>
+                    <ul>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+    <a href=""><li>Bron</li></a>
+</ul>
+                </div>
+            </section>
+    
+    </main>`;
 }
 
 function Data(data) {
@@ -175,4 +234,4 @@ function Search() {
   });
 }
 
-export default { Hulp, Data, Search, Werkstuk };
+export default { Hulp, Data, Search, Werkstuk, WerkstukDetail };

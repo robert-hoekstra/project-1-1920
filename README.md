@@ -21,7 +21,7 @@ In de applicatie kunnen leerlingen:
 * Vorige werkstukken inzien
 * Hulp verkrijgen voor het maken van een werkstuk
 
-### De applicatie
+### De aplicatie
 De applicatie werkt als volgt:
 De leerling wordt begeleidt door Booky, een mascotte die de leerling wijs maakt in de wereld van biblioltheken en het maken van werkstukken.
 
@@ -44,9 +44,12 @@ Momenteel worden er alleen boeken terugegeven als resultaat. Maar het is ook mog
 * Een lijst bijhouden van gevonden bronnen.
 * Een verzameling van bronnen opslaan om op latere momenten weer te kunnen raadplegen.
 * Een template generator die een skelet aanlevert aan de leerling. Zo heeft de leerling een fundament voor een goed werkstuk.
+* Overzicht van wat voor mediadragers er zijn binnen een werkstuk.
+
 
 ## Props & Credits
 Joost Faber - Voor het aanleveren van de API example code.
-OBA - voor het voorzien van de API
-Mark - voor het begeleiden & feedback geven op/van het project
+Nick - Async await toepassen.
+OBA - voor het voorzien van de API.
+Mark - voor het begeleiden & feedback geven op/van het project.
 

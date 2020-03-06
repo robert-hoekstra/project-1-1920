@@ -267,6 +267,17 @@ article{
     bottom: 0;
 }
 
+.detailpage{
+    display: grid;
+}
+
+#nogrid{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
 
 
 #detail h2{
